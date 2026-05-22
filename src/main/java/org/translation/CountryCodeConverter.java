@@ -13,6 +13,7 @@ import java.util.Map;
  */
 public class CountryCodeConverter {
 
+    private final int numParts = 3;
     private final Map<String, String> codeToName;
     private final Map<String, String> nameToCode;
 
@@ -34,7 +35,6 @@ public class CountryCodeConverter {
 
         codeToName = new HashMap<>();
         nameToCode = new HashMap<>();
-        final int numParts = 3;
 
         try {
             List<String> lines = Files.readAllLines(Paths.get(getClass()
