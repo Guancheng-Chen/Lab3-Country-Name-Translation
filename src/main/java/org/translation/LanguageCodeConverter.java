@@ -50,10 +50,10 @@ public class LanguageCodeConverter {
                 String line = iterator.next();
                 String[] parts = line.split("\t");
                 if (parts.length >= NUM_PART) {
-                    String language = parts[0];
-                    String code = parts[1];
-                    langToCode.put(language, code);
-                    codeToLang.put(code, language);
+                    String languageName = parts[0];
+                    String languageCode = parts[1];
+                    langToCode.put(languageName, languageCode);
+                    codeToLang.put(languageCode, languageName);
                 }
             }
         }
